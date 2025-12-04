@@ -7,7 +7,7 @@ from datetime import datetime
 st.set_page_config(page_title="Arsenal Injury Analysis", page_icon="⚽", layout="wide")
 
 # Title and Intro
-st.title("⚽ Arsenal FC: The Price of Injuries")
+st.title("Arsenal FC: The Price of Injuries")
 st.markdown("""
 ### A Data-Driven Analysis of Title Charges (2022-2026)
 This dashboard visualizes the correlation between key player injuries and Arsenal's Premier League title challenges.
