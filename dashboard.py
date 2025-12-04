@@ -99,7 +99,7 @@ with col1:
 
 with col2:
     st.markdown("#### 2023/24: The Winter Dip")
-    st.primary("**Verdict:** Timber's ACL & Partey's absence killed depth.")
+    st.info("**Verdict:** Timber's ACL & Partey's absence killed depth.")
     st.metric("Finish", "2nd", "89 Pts")
     st.write("A record-breaking season, but the 'December Dip' (10 pts from 27) due to squad fatigue/injuries cost the title.")
 
