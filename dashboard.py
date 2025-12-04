@@ -14,6 +14,38 @@ This dashboard visualizes the correlation between key player injuries and Arsena
 **Hypothesis:** *Injuries to structural pillars (Defense, Midfield, Attack) have been the primary cause of late-season collapses.*
 """)
 
+import base64
+
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+def set_png_as_page_bg(png_file):
+    bin_str = get_base64_of_bin_file(png_file)
+    page_bg_img = '''
+    <style>
+    .stApp {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
+    }
+    .stApp > header {
+        background-color: transparent;
+    }
+    .block-container {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 2rem;
+        border-radius: 10px;
+    }
+    h1, h2, h3, h4, h5, h6, p, div, span {
+        color: white !important;
+    }
+    </style>
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+
+set_png_as_page_bg('arsenal_bg.png')
+
 # --- DATA PREPARATION ---
 data = [
     # 2022/23
