@@ -103,7 +103,14 @@ fig = px.timeline(
     }
 )
 fig.update_yaxes(autorange="reversed") # Top to bottom
-fig.update_layout(xaxis_title="Date", height=500)
+fig.update_layout(
+    xaxis_title="Date", 
+    height=500,
+    paper_bgcolor='rgba(0,0,0,0)', # Transparent background
+    plot_bgcolor='rgba(0,0,0,0)', # Transparent plot area
+    font=dict(color='white'), # White text for contrast
+    xaxis=dict(showgrid=True, gridcolor='rgba(255,255,255,0.1)'), # Subtle grid lines
+)
 
 # Add vertical lines for key events
 events = [
