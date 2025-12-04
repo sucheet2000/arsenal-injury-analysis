@@ -89,7 +89,7 @@ st.plotly_chart(fig, use_container_width=True)
 st.divider()
 st.subheader("🔍 Season Deep Dive")
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     st.markdown("#### 2022/23: The Defensive Collapse")
@@ -98,12 +98,18 @@ with col1:
     st.write("The loss of Saliba in March destroyed the high line. Arsenal conceded 2+ goals in 5 of the next 8 games.")
 
 with col2:
+    st.markdown("#### 2023/24: The Winter Dip")
+    st.primary("**Verdict:** Timber's ACL & Partey's absence killed depth.")
+    st.metric("Finish", "2nd", "89 Pts")
+    st.write("A record-breaking season, but the 'December Dip' (10 pts from 27) due to squad fatigue/injuries cost the title.")
+
+with col3:
     st.markdown("#### 2024/25: The Attacking Crisis")
     st.warning("**Verdict:** Losing both strikers (Jesus/Havertz) was fatal.")
     st.metric("Finish", "2nd", "74 Pts")
     st.write("A trophyless season defined by a lack of goals in the run-in. The burden on Saka/Martinelli became too high.")
 
-with col3:
+with col4:
     st.markdown("#### 2025/26: The Current Danger")
     st.error("**Verdict:** High Risk. Defensive spine is injured.")
     st.metric("Current", "1st", "33 Pts")
